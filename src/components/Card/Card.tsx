@@ -1,9 +1,13 @@
-import React from 'react'
+import React,{PropsWithChildren} from "react"
 
 type Props = {}
 
-const Card = (props: Props) => {
+const Card = ({children}: PropsWithChildren<Props>) => {
   return (
-    <div>Card</div>
-  )
+      <div className="card" style={{width: '18rem'}}>
+        {children}
+      </div>
+    )
 }
+
+export default Card
